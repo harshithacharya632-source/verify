@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Goflix Verification</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+button {
+  padding: 12px 20px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🎬 Goflix</h2>
+  <h3>🔐 Human Verification</h3>
+  <p>Please wait... verifying you are human</p>
+
+  <button id="btn">Continue</button>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const redirect = params.get("url");
+
+setTimeout(() => {
+  document.getElementById("btn").style.display = "block";
+}, 3000);
+
+document.getElementById("btn").onclick = function() {
+  window.location.href = redirect;
+};
+</script>
+
+</body>
+</html>
